@@ -37,13 +37,6 @@ RUN echo \
 
 && echo
 
-RUN apk upgrade --update && \
-    apk add --update git curl make gcc g++ python linux-headers libgcc libstdc++ && \
-    curl -sSL https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz | tar -xz && \
-    cd /node-${NODE_VERSION} && \
-    ./configure --prefix=/usr --without-snapshot && \
-    make -j$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) && \
-    make install && \
-    npm install -g npm@${NPM_VERSION} && \
+RUN curl -sL https://github.com/taaem/nodejs-linux-installer/releases/download/v0.3/node-install.sh | sh
 
 COPY ./ /usr/bin
