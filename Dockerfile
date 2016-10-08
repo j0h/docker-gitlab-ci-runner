@@ -44,11 +44,6 @@ RUN apk upgrade --update && \
     ./configure --prefix=/usr --without-snapshot && \
     make -j$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) && \
     make install && \
-    cd / && \
     npm install -g npm@${NPM_VERSION} && \
-    apk del gcc g++ linux-headers && \
-    rm -rf /etc/ssl /node-${NODE_VERSION} /usr/include \
-    /usr/share/man /tmp/* /var/cache/apk/* /root/.npm /root/.node-gyp \
-    /usr/lib/node_modules/npm/man /usr/lib/node_modules/npm/doc /usr/lib/node_modules/npm/html
 
 COPY ./ /usr/bin
