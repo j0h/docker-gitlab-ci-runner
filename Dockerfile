@@ -13,6 +13,7 @@ ENV PACKAGES="\
   clang \
   openssh \
   curl \
+  sudo \
 "
 
 RUN echo \
