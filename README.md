@@ -5,6 +5,6 @@ include software like python, clang, nodejs, git, ssh, ...
 
 These projects are: 
 - https://github.com/jfloff/alpine-python
-- https://github.com/smebberson/docker-alpine
 - https://gitlab.com/gitlab-org/gitlab-ci-multi-runner
+- https://github.com/nodejs/docker-node
 - (I hope I did not forget one)
