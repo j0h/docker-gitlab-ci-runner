@@ -12,6 +12,7 @@ ENV PACKAGES="\
   python${PYTHON_MAJOR_VERSION}-dev \
   clang \
   openssh \
+  curl \
 "
 
 RUN echo \
