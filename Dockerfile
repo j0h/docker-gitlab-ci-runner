@@ -14,8 +14,8 @@ ENV PACKAGES="\
   clang \
   openssh \
   curl \
-  sudo \
   gnupg \
+  go \
 "
 
 RUN echo \
